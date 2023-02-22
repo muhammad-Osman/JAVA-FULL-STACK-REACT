@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "cbe1dbbb-615a-479c-bdb5-509290474722",
+		"name": "assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15750966"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"usman5411\",\r\n    \"email\": \"usman5411@gmail.com\",\r\n    \"password\": \"123456789\",\r\n    \"role\": [\"ADMIN\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8888/api/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"usman5411\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8888/api/auth/signin"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c21hbjU0MTEiLCJpYXQiOjE2NzY5NTY4ODEsImV4cCI6MTY3Njk2MDQ4MX0.tXf9NoTpNIMe7Ax7Gb3_eKj79rWL73jgk8iEx1PK5-cJqBZtYJf03j5RckAgScZB_K5YlMmwmaPMuu_99y3Buw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"Product 1\",\r\n    \"price\": 20.0,\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8888/api/product/addProduct"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Product By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c21hbjU0MTEiLCJpYXQiOjE2NzY5MjQwNTQsImV4cCI6MTY3NjkyNzY1NH0.KE7UA9PIFMQXpjkFmKNN7IKms8SE7TtLxm7q-cxw-OvJt7sl0OGTQPeDLujSmdOcFS11CHRLVXr_ozIly121ug"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8888/api/product/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c21hbjU0MTEiLCJpYXQiOjE2NzY5MjQwNTQsImV4cCI6MTY3NjkyNzY1NH0.KE7UA9PIFMQXpjkFmKNN7IKms8SE7TtLxm7q-cxw-OvJt7sl0OGTQPeDLujSmdOcFS11CHRLVXr_ozIly121ug"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8888/api/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c21hbjU0MTEiLCJpYXQiOjE2NzY5MjQwNTQsImV4cCI6MTY3NjkyNzY1NH0.KE7UA9PIFMQXpjkFmKNN7IKms8SE7TtLxm7q-cxw-OvJt7sl0OGTQPeDLujSmdOcFS11CHRLVXr_ozIly121ug"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"Surf Excel\",\r\n    \"price\": 20.0,\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8888/api/product/update/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c21hbjU0MTEiLCJpYXQiOjE2NzY5MjQwNTQsImV4cCI6MTY3NjkyNzY1NH0.KE7UA9PIFMQXpjkFmKNN7IKms8SE7TtLxm7q-cxw-OvJt7sl0OGTQPeDLujSmdOcFS11CHRLVXr_ozIly121ug"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8888/api/product/delete/2"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
