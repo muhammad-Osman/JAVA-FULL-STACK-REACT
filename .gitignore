@@ -1,0 +1,7 @@
+node_modules/
+.gradle/
+bin/
+gradle/
+gradlew
+gradlew.bat
+package-lock.json
